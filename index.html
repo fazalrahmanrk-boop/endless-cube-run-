@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>HOSTRK — 3D Endless Runner</title>
+    <meta name="description" content="HOSTRK — 3D Endless Runner" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <div id="hud">
+      <div class="pill"><b id="score">0</b><span><u data-i="score"></u> &middot; <i id="dist" style="font-style:normal">0</i> m</span></div>
+      <button id="pz" aria-label="Pause" style="pointer-events:auto;align-self:flex-start;margin:0;padding:0;width:44px;height:44px;border-radius:14px;background:var(--glass);color:#fff;border:1px solid var(--accent);font-size:18px">⏸</button>
+      <div class="pill" id="coinPill" style="text-align:right"><b id="coins">0</b><span data-i="coins"></span></div>
+    </div>
+    <div id="pups"></div><div id="warn"></div><div id="lvl"></div>
+    <div class="mobile-controls" aria-label="Touch game controls">
+      <button type="button" data-control="left" aria-label="Move left">◀</button>
+      <button type="button" data-control="down" aria-label="Slide">▼</button>
+      <button type="button" data-control="jump" aria-label="Jump">▲</button>
+      <button type="button" data-control="attack" aria-label="Attack">💥</button>
+      <button type="button" data-control="right" aria-label="Move right">▶</button>
+    </div>
+    <div id="overlay">
+      <div class="card">
+        <h1 id="title">HOSTRK</h1>
+        <p id="stats"></p>
+        <div class="tabs">
+          <button data-tab="animals" data-i="animals"></button>
+          <button data-tab="style" data-i="style"></button>
+          <button data-tab="lang" data-i="language"></button>
+        </div>
+        <div id="panel"></div>
+        <p class="hint" data-i="hint"></p>
+        <p class="hint" data-i="pu"></p>
+        <button id="snd" class="chip" aria-label="Sound" style="margin:8px 6px 0">🔊</button>
+        <button id="go"></button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
